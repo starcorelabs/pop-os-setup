@@ -1,6 +1,6 @@
 # POP OS Setup
 Script for automated app install
-source: https://www.addictivetips.com/ubuntu-linux-tips/make-ubuntu-post-installation-script/
+- [Post install script tutorial](https://www.addictivetips.com/ubuntu-linux-tips/make-ubuntu-post-installation-script/)
 
 ### Update and Upgrade
 - Go to settings > about and change hostname
@@ -17,36 +17,40 @@ sudo apt-get install ubuntu-restricted-extras
 
 ### Dash to dock
 - Install chrome gnome shell integration extension 
-- Visit https://extensions.gnome.org/extension/307/dash-to-dock/
+- [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
 - Push button on screen from "Off" to "On"
 
 ### Install Oracle Java
-source: https://www.fosstechnix.com/install-oracle-java-8-on-ubuntu-20-04/
+- [Oracle Java 8 tutorial](https://www.fosstechnix.com/install-oracle-java-8-on-ubuntu-20-04/)
 
 - download oracle java 8 jre (not jdk)
-- https://www.oracle.com/java/technologies/javase-jre8-downloads.html
+- [Download JRE8](https://www.oracle.com/java/technologies/javase-jre8-downloads.html)
 - Agree and Sign-In to download
 
-sudo mkdir  -p /opt/jre
-sudo cp -rf /home/rath/jre-8u271-linux-x64.tar.gz /opt/jre/
-cd /opt/jdk/
-sudo tar -zxf jre-8u271-linux-x64.tar.gz
-sudo update-alternatives --install /usr/bin/java java /opt/jre/jre1.8.0_251/bin/java 100
-sudo update-alternatives --display java
-sudo update-alternatives --config java
-sudo  nano /etc/environment
+- sudo mkdir  -p /opt/jre
+- sudo cp -rf /home/rath/jre-8u271-linux-x64.tar.gz /opt/jre/
+- cd /opt/jdk/
+- sudo tar -zxf jre-8u271-linux-x64.tar.gz
+- sudo update-alternatives --install /usr/bin/java java /opt/jre/jre1.8.0_251/bin/java 100
+- sudo update-alternatives --display java
+- sudo update-alternatives --config java
+- sudo  nano /etc/environment
+```
     JAVA_HOME=/opt/jre/jre1.8.0_251
     JRE_HOME=/opt/jre/jre1.8.0_251/jre
-source /etc/environment
-echo $JAVA_HOME
-java -version
+```
+- source /etc/environment
+- echo $JAVA_HOME
+- java -version
 
 ### Install Samba
-source: https://vitux.com/how-to-install-and-configure-samba-on-ubuntu/
+- [Samba install tutorial](https://vitux.com/how-to-install-and-configure-samba-on-ubuntu/)
 
 - sudo apt install samba
 - sudo systemctl status nmbd
 - sudo nano /etc/samba/smb.conf
+
+```
     [samba-share]
     comment = Samba on Ubuntu
     path = /samba
@@ -54,6 +58,7 @@ source: https://vitux.com/how-to-install-and-configure-samba-on-ubuntu/
     guest ok = no
     browsable = yes
     valid user = user
+```
 - sudo smbpasswd -a username
 - sudo service smbd restart (or sudo systemctl restart smbd.service)
 - ip a (or ipconfig) to get ip address of samba server
@@ -62,7 +67,7 @@ source: https://vitux.com/how-to-install-and-configure-samba-on-ubuntu/
 - GUI > connect to server: smb:// [IP_address or Host_name]/[share_name]
 
 ### Node Version Manager (NVM) for Node and NPM
-source: https://tecadmin.net/install-nodejs-with-nvm/
+- [NVM install tutorial](https://tecadmin.net/install-nodejs-with-nvm/)
 - curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 - source ~/.profile (Reload system environment)
 - nvm ls-remote (list available node versions)
@@ -87,6 +92,7 @@ Use script to install this apps
 - Bookworm ebook reader
 - Chrome Browser
 - Discord
+- Git
 - Glimpse Image Editor
 - Raspberry Pi Imager
 - InkScape
@@ -105,7 +111,4 @@ Use script to install this apps
 - VS Codium
 - WinFF
 - Zoom
-- Git
-
-
 
