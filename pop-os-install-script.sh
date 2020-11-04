@@ -21,7 +21,7 @@ sudo apt update && sudo apt install codium
 # Install flatpak apps
 sudo apt install flatpak -y
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo flatpak install flathub org.glimpse_editor.Glimpse org.inkscape.Inkscape com.obsproject.Studio com.github.babluboy.bookworm com.nextcloud.desktopclient.nextcloud org.openshot.OpenShot com.discordapp.Discord com.spotify.Client us.zoom.Zoom
+sudo flatpak install flathub org.glimpse_editor.Glimpse org.inkscape.Inkscape com.obsproject.Studio com.github.babluboy.bookworm com.nextcloud.desktopclient.nextcloud org.openshot.OpenShot com.discordapp.Discord com.spotify.Client us.zoom.Zoom -y
 
 
 # Install external deb packages
@@ -34,6 +34,5 @@ wget https://download.virtualbox.org/virtualbox/6.1.16/virtualbox-6.1_6.1.16-140
 wget https://download.virtualbox.org/virtualbox/6.1.16/Oracle_VM_VirtualBox_Extension_Pack-6.1.16.vbox-extpack
 
 # Install deb packages
+sudo chmod +x *.deb 
 sudo dpkg -i *.deb
-
-

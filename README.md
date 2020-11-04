@@ -27,17 +27,18 @@ sudo apt-get install ubuntu-restricted-extras
 - [Download JRE8](https://www.oracle.com/java/technologies/javase-jre8-downloads.html)
 - Agree and Sign-In to download
 
-- sudo mkdir  -p /opt/jre
-- sudo cp -rf /home/rath/jre-8u271-linux-x64.tar.gz /opt/jre/
-- cd /opt/jdk/
+- sudo mkdir -p /opt/jre
+- sudo cp -rf jre-8u271-linux-x64.tar.gz /opt/jre
+- cd /opt/jre
 - sudo tar -zxf jre-8u271-linux-x64.tar.gz
-- sudo update-alternatives --install /usr/bin/java java /opt/jre/jre1.8.0_251/bin/java 100
+- sudo update-alternatives --install /usr/bin/java java /opt/jre/jre1.8.0_271/bin/java 100
 - sudo update-alternatives --display java
 - sudo update-alternatives --config java
-- sudo  nano /etc/environment
+- sudo nano /etc/environment
+
 ```
-    JAVA_HOME=/opt/jre/jre1.8.0_251
-    JRE_HOME=/opt/jre/jre1.8.0_251/jre
+    JAVA_HOME=/opt/jre/jre1.8.0_271
+    JRE_HOME=/opt/jre/jre1.8.0_271/jre
 ```
 - source /etc/environment
 - echo $JAVA_HOME
@@ -56,7 +57,7 @@ sudo apt-get install ubuntu-restricted-extras
     path = /samba
     read only = no
     guest ok = no
-    browsable = yes
+    browseable = yes
     valid user = user
 ```
 - sudo smbpasswd -a username
@@ -79,7 +80,7 @@ sudo apt-get install ubuntu-restricted-extras
 - nvm uninstall v4.9.1 (lets you uninstall specific version)
 
 ### Apps to install
-Use script to install this apps
+Use script to install the following apps
 
 ### Terminal Apps
 - htop
