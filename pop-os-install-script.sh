@@ -5,9 +5,6 @@
 sudo apt update && sudo apt upgrade -y
 sudo apt-get install ubuntu-restricted-extras -y
 
-# Install terminal apps
-sudo apt install neofetch htop bmon screen tmux -y
-
 # Install apps from repo
 sudo apt install gnome-tweaks synaptic thunderbird git rpi-imager steam lutris winff vlc -y
 
@@ -21,8 +18,7 @@ sudo apt update && sudo apt install codium
 # Install flatpak apps
 sudo apt install flatpak -y
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo flatpak install flathub org.glimpse_editor.Glimpse org.inkscape.Inkscape com.obsproject.Studio com.github.babluboy.bookworm com.nextcloud.desktopclient.nextcloud org.openshot.OpenShot com.discordapp.Discord com.spotify.Client us.zoom.Zoom -y
-
+sudo flatpak install flathub org.glimpse_editor.Glimpse org.inkscape.Inkscape com.obsproject.Studio com.github.babluboy.bookworm com.nextcloud.desktopclient.nextcloud com.discordapp.Discord -y
 
 # Install external deb packages
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -36,3 +32,13 @@ wget https://download.virtualbox.org/virtualbox/6.1.16/Oracle_VM_VirtualBox_Exte
 # Install deb packages
 sudo chmod +x *.deb 
 sudo dpkg -i *.deb
+
+# Brave Browser
+sudo apt install apt-transport-https curl gnupg -y
+curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser -y
+
+# Cleanup 
+sudo apt autoremove -y

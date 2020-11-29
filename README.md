@@ -188,15 +188,9 @@ Alternatively, if you prefer to use the terminal you can accomplish the same eff
 - To run the install script type: sh pop-os-install-script.sh 
 - Press enter. You'll be asked for your password. Then the script will run and install the following apps. 
 
-### Terminal Apps
-- htop
-- bmon
-- neofetch
-- screen
-- tmux
-
 ### Gui Apps
 - Bookworm ebook reader
+- Brave Browser
 - Chrome Browser
 - Discord
 - Git
@@ -208,7 +202,6 @@ Alternatively, if you prefer to use the terminal you can accomplish the same eff
 - NextCloud Desktop Client
 - NoMachine
 - OBS
-- OpenShot Video Editor
 - Synaptic Package Manager
 - TeamViewer
 - Thunderbird
@@ -217,7 +210,26 @@ Alternatively, if you prefer to use the terminal you can accomplish the same eff
 - VLC
 - VS Codium
 - WinFF
-- Zoom
+
+### Terminal Apps
+I've also made a second script called terminal-apps.sh.<br/>
+It will install the following:
+- neofetch
+- htop
+- tmux
+- screen
+- ranger
+- bmon
+- iftop
+- irssi
+- lsof
+- lynx
+- feh
+- netcat
+- nmap
+- mplayer
+- basetet
+- cmatrix
 
 ### Enable Minimize and Maximize Buttons
 Out of the box POP OS doesn't have min or max buttons on windows. 
